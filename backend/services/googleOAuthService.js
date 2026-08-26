@@ -12,7 +12,41 @@ dotenv.config();
 
 
 // ==========================================
-// PATHS
+// PRODUCTION / LOCAL OAUTH CONFIGURATION
+// ==========================================
+//
+// Production:
+//   GOOGLE_OAUTH_CLIENT_ID
+//   GOOGLE_OAUTH_CLIENT_SECRET
+//   GOOGLE_OAUTH_REFRESH_TOKEN
+//   GOOGLE_OAUTH_REDIRECT_URI
+//
+// Local development:
+//   google-oauth-client.json
+//   google-oauth-token.json
+//
+// Production environment variables take priority.
+// Local files remain available as fallback.
+//
+
+const clientIdFromEnv =
+    process.env.GOOGLE_OAUTH_CLIENT_ID;
+
+
+const clientSecretFromEnv =
+    process.env.GOOGLE_OAUTH_CLIENT_SECRET;
+
+
+const refreshTokenFromEnv =
+    process.env.GOOGLE_OAUTH_REFRESH_TOKEN;
+
+
+const redirectUri =
+    process.env.GOOGLE_OAUTH_REDIRECT_URI;
+
+
+// ==========================================
+// LOCAL FILE PATHS
 // ==========================================
 
 const clientPath =
@@ -33,18 +67,68 @@ const tokenPath =
     );
 
 
-const redirectUri =
-    process.env.GOOGLE_OAUTH_REDIRECT_URI;
+// ==========================================
+// CHECK PRODUCTION OAUTH CONFIGURATION
+// ==========================================
+
+function hasProductionOAuthConfig() {
+
+    return Boolean(
+        clientIdFromEnv &&
+        clientSecretFromEnv &&
+        refreshTokenFromEnv
+    );
+
+}
 
 
 // ==========================================
-// LOAD OAUTH CLIENT
+// LOAD OAUTH CLIENT CONFIGURATION
 // ==========================================
 
 function loadOAuthClientConfig() {
 
+    // ======================================
+    // PRODUCTION ENVIRONMENT
+    // ======================================
+
     if (
-        !fs.existsSync(clientPath)
+        clientIdFromEnv &&
+        clientSecretFromEnv
+    ) {
+
+        if (
+            !redirectUri
+        ) {
+
+            throw new Error(
+                'GOOGLE_OAUTH_REDIRECT_URI is missing.'
+            );
+
+        }
+
+
+        return {
+
+            clientId:
+                clientIdFromEnv,
+
+            clientSecret:
+                clientSecretFromEnv
+
+        };
+
+    }
+
+
+    // ======================================
+    // LOCAL FILE FALLBACK
+    // ======================================
+
+    if (
+        !fs.existsSync(
+            clientPath
+        )
     ) {
 
         throw new Error(
@@ -81,21 +165,25 @@ function loadOAuthClientConfig() {
     }
 
 
-    if (!redirectUri) {
+    if (
+        !redirectUri
+    ) {
 
         throw new Error(
-            'GOOGLE_OAUTH_REDIRECT_URI is missing from .env'
+            'GOOGLE_OAUTH_REDIRECT_URI is missing.'
         );
 
     }
 
 
     return {
+
         clientId:
             config.client_id,
 
         clientSecret:
             config.client_secret
+
     };
 
 }
@@ -115,9 +203,13 @@ function createOAuthClient() {
 
 
     return new google.auth.OAuth2(
+
         clientId,
+
         clientSecret,
+
         redirectUri
+
     );
 
 }
@@ -187,8 +279,11 @@ function generateAuthorizationUrl() {
 
 
     return {
+
         authorizationUrl,
+
         state
+
     };
 
 }
@@ -226,7 +321,9 @@ async function handleOAuthCallback({
 
 
     if (
-        !pendingStates.has(state)
+        !pendingStates.has(
+            state
+        )
     ) {
 
         throw new Error(
@@ -236,7 +333,9 @@ async function handleOAuthCallback({
     }
 
 
-    pendingStates.delete(state);
+    pendingStates.delete(
+        state
+    );
 
 
     const oauth2Client =
@@ -267,22 +366,45 @@ async function handleOAuthCallback({
     );
 
 
-    fs.writeFileSync(
+    // ======================================
+    // SAVE TOKEN FOR LOCAL DEVELOPMENT
+    // ======================================
+    //
+    // In Railway production, the refresh token
+    // should be stored in:
+    //
+    // GOOGLE_OAUTH_REFRESH_TOKEN
+    //
+    // and should NOT depend on local files.
+    //
 
-        tokenPath,
+    if (
+        !hasProductionOAuthConfig()
+    ) {
 
-        JSON.stringify(
-            tokens,
-            null,
-            2
-        ),
+        fs.writeFileSync(
 
-        {
-            encoding: 'utf8',
-            mode: 0o600
-        }
+            tokenPath,
 
-    );
+            JSON.stringify(
+                tokens,
+                null,
+                2
+            ),
+
+            {
+
+                encoding:
+                    'utf8',
+
+                mode:
+                    0o600
+
+            }
+
+        );
+
+    }
 
 
     return tokens;
@@ -291,13 +413,44 @@ async function handleOAuthCallback({
 
 
 // ==========================================
-// LOAD SAVED OAUTH CLIENT
+// LOAD AUTHENTICATED OAUTH CLIENT
 // ==========================================
 
 function getAuthenticatedOAuthClient() {
 
+    // ======================================
+    // PRODUCTION ENVIRONMENT
+    // ======================================
+
     if (
-        !fs.existsSync(tokenPath)
+        hasProductionOAuthConfig()
+    ) {
+
+        const oauth2Client =
+            createOAuthClient();
+
+
+        oauth2Client.setCredentials({
+
+            refresh_token:
+                refreshTokenFromEnv
+
+        });
+
+
+        return oauth2Client;
+
+    }
+
+
+    // ======================================
+    // LOCAL TOKEN FILE
+    // ======================================
+
+    if (
+        !fs.existsSync(
+            tokenPath
+        )
     ) {
 
         return null;
@@ -333,6 +486,23 @@ function getAuthenticatedOAuthClient() {
 // ==========================================
 
 function isGoogleAuthorized() {
+
+    // ======================================
+    // PRODUCTION
+    // ======================================
+
+    if (
+        hasProductionOAuthConfig()
+    ) {
+
+        return true;
+
+    }
+
+
+    // ======================================
+    // LOCAL
+    // ======================================
 
     return fs.existsSync(
         tokenPath
