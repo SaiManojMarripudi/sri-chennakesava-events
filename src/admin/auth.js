@@ -20,7 +20,7 @@ export function renderAdminLogin() {
 
                 <div class="admin-login-logo">
                     <img
-                        src="/src/assets/logo/sce-logo.png"
+                        src="/logo/sce-logo.png"
                         alt="SRI CHENNAKESAVA EVENTS"
                     >
                 </div>
