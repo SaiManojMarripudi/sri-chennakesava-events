@@ -1,0 +1,550 @@
+/* ==========================================
+   SRI CHENNAKESAVA EVENTS
+   LAUNCH PAGE
+   ========================================== */
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+}
+
+
+.launch-page [hidden] {
+    display: none !important;
+}
+
+
+/* ==========================================
+   MAIN LAUNCH PAGE
+   ========================================== */
+
+.launch-page {
+    width: 100vw;
+    min-height: 100vh;
+
+    position: relative;
+
+    overflow: hidden;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background:
+        radial-gradient(
+            circle at 50% 30%,
+            rgba(
+                212,
+                175,
+                55,
+                0.10
+            ),
+            transparent 36%
+        ),
+        linear-gradient(
+            135deg,
+            #13051a,
+            #24102d,
+            #100317
+        );
+
+    color: #ffffff;
+}
+
+
+.launch-intro {
+    width: min(
+        90vw,
+        900px
+    );
+
+    text-align: center;
+
+    position: relative;
+
+    z-index: 2;
+
+    padding: 40px 20px;
+}
+
+
+.intro-brand-name {
+    font-family:
+        'Playfair Display',
+        Georgia,
+        serif;
+
+    font-size:
+        clamp(
+            1.9rem,
+            4.2vw,
+            3.2rem
+        );
+
+    font-weight: 700;
+
+    letter-spacing: 0.20em;
+
+    color: #f0d477;
+
+    text-shadow:
+        0 0 20px rgba(
+            212,
+            175,
+            55,
+            0.25
+        );
+}
+
+
+.intro-brand-events {
+    margin-top: 8px;
+
+    font-family:
+        'Playfair Display',
+        Georgia,
+        serif;
+
+    font-size: 1.25rem;
+
+    font-weight: 600;
+
+    letter-spacing: 0.48em;
+
+    color: #d4af37;
+}
+
+
+.intro-line {
+    width: 100px;
+
+    height: 1px;
+
+    margin: 24px auto;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            #d4af37,
+            transparent
+        );
+}
+
+
+.intro-eyebrow {
+    margin: 0 0 14px;
+
+    font-size: 0.70rem;
+
+    font-weight: 700;
+
+    letter-spacing: 0.35em;
+
+    color: #d4af37;
+}
+
+
+.intro-title {
+    margin: 0;
+
+    font-family:
+        'Playfair Display',
+        Georgia,
+        serif;
+
+    font-size:
+        clamp(
+            2.5rem,
+            5.8vw,
+            4.8rem
+        );
+
+    line-height: 1;
+
+    font-weight: 600;
+}
+
+
+.intro-title span {
+    display: block;
+
+    color: #e5c765;
+}
+
+
+.intro-description {
+    margin: 20px auto 30px;
+
+    color:
+        rgba(
+            255,
+            255,
+            255,
+            0.64
+        );
+}
+
+
+.launch-page-button {
+    min-width: 280px;
+
+    padding: 18px 32px;
+
+    border: 1px solid rgba(
+        212,
+        175,
+        55,
+        0.85
+    );
+
+    border-radius: 999px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #b9871b,
+            #f1d875,
+            #b27d13
+        );
+
+    color: #18061e;
+
+    font-weight: 800;
+
+    letter-spacing: 0.16em;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 0 30px rgba(
+            212,
+            175,
+            55,
+            0.20
+        ),
+        0 16px 50px rgba(
+            0,
+            0,
+            0,
+            0.28
+        );
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+
+.launch-page-button:hover {
+    transform:
+        translateY(-3px);
+
+    box-shadow:
+        0 0 45px rgba(
+            212,
+            175,
+            55,
+            0.36
+        );
+}
+
+
+.launch-button-icon {
+    margin-right: 10px;
+}
+
+
+/* ==========================================
+   COUNTDOWN OVERLAY
+   ========================================== */
+
+.launch-overlay {
+    position: fixed;
+
+    inset: 0;
+
+    z-index: 99999;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    overflow: hidden;
+}
+
+
+/* ==========================================
+   BLURRED BACKGROUND
+   ========================================== */
+
+.launch-backdrop {
+    position: absolute;
+
+    inset: -30px;
+
+    background:
+        rgba(
+            10,
+            3,
+            15,
+            0.68
+        );
+
+    backdrop-filter:
+        blur(20px);
+
+    -webkit-backdrop-filter:
+        blur(20px);
+}
+
+
+/* ==========================================
+   COUNTDOWN CONTENT
+   ========================================== */
+
+.countdown-wrapper {
+    position: relative;
+
+    z-index: 5;
+
+    width: min(
+        92vw,
+        1080px
+    );
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+}
+
+
+/* ==========================================
+   VIDEO
+   ========================================== */
+
+.countdown-video-frame {
+    position: relative;
+
+    width: min(
+        88vw,
+        900px
+    );
+
+    aspect-ratio:
+        16 / 10;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    overflow: hidden;
+
+    border-radius: 18px;
+
+    background:
+        #000000;
+
+    box-shadow:
+        0 0 0 1px rgba(
+            212,
+            175,
+            55,
+            0.18
+        ),
+        0 20px 90px rgba(
+            0,
+            0,
+            0,
+            0.60
+        ),
+        0 0 60px rgba(
+            212,
+            175,
+            55,
+            0.10
+        );
+}
+
+
+.countdown-video {
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: contain;
+
+    background: #000000;
+}
+
+
+/* ==========================================
+   LIVE SCREEN
+   ========================================== */
+
+.live-phase {
+    position: relative;
+
+    z-index: 10;
+
+    width: 100vw;
+    height: 100vh;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+
+    background:
+        radial-gradient(
+            circle at center,
+            rgba(
+                212,
+                175,
+                55,
+                0.14
+            ),
+            #120617 50%,
+            #060107 100%
+        );
+}
+
+
+.live-brand {
+    margin: 0 0 18px;
+
+    font-family:
+        'Playfair Display',
+        Georgia,
+        serif;
+
+    font-size:
+        clamp(
+            3.3rem,
+            5.2vw,
+            4.2rem
+        );
+
+    font-weight: 600;
+
+    letter-spacing: 0.18em;
+
+    color: #e3c75f;
+
+    text-shadow:
+        0 0 20px rgba(
+            212,
+            175,
+            55,
+            0.28
+        );
+}
+
+
+.live-title {
+    margin: 0;
+
+    font-family:
+        'Playfair Display',
+        Georgia,
+        serif;
+
+    font-size:
+        clamp(
+            1.5rem,
+            4.0vw,
+            3.0rem
+        );
+
+    line-height: 0.95;
+
+    font-weight: 600;
+
+    letter-spacing: 0.08em;
+
+    color: #ffffff;
+
+    text-shadow:
+        0 0 30px rgba(
+            212,
+            175,
+            55,
+            0.42
+        );
+}
+
+
+.live-divider {
+    width: 110px;
+
+    height: 1px;
+
+    margin: 25px 0 22px;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            #d4af37,
+            transparent
+        );
+}
+
+
+.live-message {
+    margin: 0;
+
+    font-size: 1.05rem;
+
+    color:
+        rgba(
+            255,
+            255,
+            255,
+            0.80
+        );
+
+    letter-spacing: 0.10em;
+}
+
+
+/* ==========================================
+   MOBILE
+   ========================================== */
+
+@media (
+    max-width: 700px
+) {
+
+    .countdown-video-frame {
+        width: 92vw;
+        border-radius: 10px;
+    }
+
+
+    .live-brand {
+        font-size: 0.95rem;
+        letter-spacing: 0.18em;
+    }
+
+
+    .live-title {
+        font-size: 4rem;
+    }
+
+}

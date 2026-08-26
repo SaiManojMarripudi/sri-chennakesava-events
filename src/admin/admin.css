@@ -1,0 +1,4374 @@
+/* =========================================================
+   SRI CHENNAKESAVA EVENTS
+   ADMIN PANEL STYLES
+   ========================================================= */
+
+
+/* =========================================================
+   GLOBAL ADMIN STYLES
+   ========================================================= */
+
+.admin-login-page,
+.admin-dashboard {
+
+    font-family:
+        "Poppins",
+        Arial,
+        sans-serif;
+
+}
+
+
+/* =========================================================
+   ADMIN LOGIN PAGE
+   ========================================================= */
+
+.admin-login-page {
+
+    min-height: 100vh;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: 24px;
+
+    box-sizing: border-box;
+
+    background:
+        radial-gradient(
+            circle at top,
+            #35104d 0%,
+            #16051f 45%,
+            #0b0310 100%
+        );
+
+}
+
+
+/* =========================================================
+   LOGIN CARD
+   ========================================================= */
+
+.admin-login-card {
+
+    width: 100%;
+
+    max-width: 430px;
+
+    padding: 42px 36px;
+
+    box-sizing: border-box;
+
+    border:
+        1px solid
+        rgba(212, 175, 55, 0.35);
+
+    border-radius: 22px;
+
+    background:
+        rgba(255, 255, 255, 0.06);
+
+    backdrop-filter:
+        blur(18px);
+
+    -webkit-backdrop-filter:
+        blur(18px);
+
+    box-shadow:
+        0 25px 70px
+        rgba(0, 0, 0, 0.45);
+
+}
+
+
+/* =========================================================
+   LOGIN LOGO
+   ========================================================= */
+
+.admin-login-logo {
+
+    display: flex;
+
+    justify-content: center;
+
+    margin-bottom: 24px;
+
+}
+
+
+.admin-login-logo img {
+
+    width: 110px;
+
+    height: 110px;
+
+    object-fit: contain;
+
+    border-radius: 50%;
+
+}
+
+
+/* =========================================================
+   LOGIN HEADER
+   ========================================================= */
+
+.admin-login-header {
+
+    text-align: center;
+
+    margin-bottom: 30px;
+
+}
+
+
+.admin-login-header h1 {
+
+    margin: 0;
+
+    color: #ffffff;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: 32px;
+
+    font-weight: 600;
+
+}
+
+
+.admin-login-header p {
+
+    margin: 8px 0 0;
+
+    color: #d4af37;
+
+    font-size: 13px;
+
+    letter-spacing: 1.5px;
+
+    text-transform: uppercase;
+
+}
+
+
+/* =========================================================
+   LOGIN FORM
+   ========================================================= */
+
+.admin-login-form {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 20px;
+
+}
+
+
+.admin-form-group {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 8px;
+
+}
+
+
+.admin-form-group label {
+
+    color: #ffffff;
+
+    font-size: 14px;
+
+    font-weight: 500;
+
+}
+
+
+.admin-form-group input {
+
+    width: 100%;
+
+    box-sizing: border-box;
+
+    padding: 14px 15px;
+
+    border:
+        1px solid
+        rgba(255, 255, 255, 0.16);
+
+    border-radius: 10px;
+
+    outline: none;
+
+    background:
+        rgba(255, 255, 255, 0.08);
+
+    color: #ffffff;
+
+    font-size: 15px;
+
+    transition:
+        border-color 0.2s ease,
+        background 0.2s ease,
+        box-shadow 0.2s ease;
+
+}
+
+
+.admin-form-group input::placeholder {
+
+    color:
+        rgba(255, 255, 255, 0.5);
+
+}
+
+
+.admin-form-group input:focus {
+
+    border-color:
+        #d4af37;
+
+    background:
+        rgba(255, 255, 255, 0.11);
+
+    box-shadow:
+        0 0 0 3px
+        rgba(212, 175, 55, 0.08);
+
+}
+
+
+/* =========================================================
+   LOGIN BUTTON
+   ========================================================= */
+
+.admin-login-button {
+
+    margin-top: 5px;
+
+    padding: 14px 18px;
+
+    border: none;
+
+    border-radius: 10px;
+
+    cursor: pointer;
+
+    background:
+        linear-gradient(
+            135deg,
+            #d4af37,
+            #f1d77a
+        );
+
+    color: #16051f;
+
+    font-size: 15px;
+
+    font-weight: 700;
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease,
+        opacity 0.2s ease;
+
+}
+
+
+.admin-login-button:hover {
+
+    transform:
+        translateY(-2px);
+
+    box-shadow:
+        0 10px 25px
+        rgba(212, 175, 55, 0.25);
+
+}
+
+
+.admin-login-button:disabled {
+
+    cursor: not-allowed;
+
+    opacity: 0.65;
+
+    transform: none;
+
+}
+
+
+/* =========================================================
+   LOGIN ERROR MESSAGE
+   ========================================================= */
+
+.admin-login-message {
+
+    padding: 11px 13px;
+
+    border-radius: 8px;
+
+    background:
+        rgba(220, 38, 38, 0.15);
+
+    border:
+        1px solid
+        rgba(248, 113, 113, 0.35);
+
+    color: #fecaca;
+
+    font-size: 13px;
+
+    line-height: 1.5;
+
+}
+
+
+/* =========================================================
+   LOGIN FOOTER
+   ========================================================= */
+
+.admin-login-footer {
+
+    margin-top: 28px;
+
+    text-align: center;
+
+    color:
+        rgba(255, 255, 255, 0.45);
+
+    font-size: 11px;
+
+    letter-spacing: 1px;
+
+}
+
+
+/* =========================================================
+   ADMIN DASHBOARD
+   ========================================================= */
+
+.admin-dashboard {
+
+    min-height: 100vh;
+
+    box-sizing: border-box;
+
+    color: #ffffff;
+
+    background:
+        radial-gradient(
+            circle at top left,
+            #35104d 0%,
+            #16051f 35%,
+            #0b0310 100%
+        );
+
+}
+
+
+/* =========================================================
+   DASHBOARD HEADER
+   ========================================================= */
+
+.admin-header {
+
+    position: sticky;
+
+    top: 0;
+
+    z-index: 100;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 20px;
+
+    min-height: 78px;
+
+    padding:
+        12px 32px;
+
+    box-sizing: border-box;
+
+    border-bottom:
+        1px solid
+        rgba(212, 175, 55, 0.22);
+
+    background:
+        rgba(11, 3, 16, 0.88);
+
+    backdrop-filter:
+        blur(18px);
+
+    -webkit-backdrop-filter:
+        blur(18px);
+
+}
+
+
+/* =========================================================
+   HEADER BRAND
+   ========================================================= */
+
+.admin-header-brand {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 13px;
+
+    min-width: 0;
+
+}
+
+
+.admin-header-brand img {
+
+    width: 48px;
+
+    height: 48px;
+
+    object-fit: contain;
+
+    flex-shrink: 0;
+
+    border-radius: 50%;
+
+}
+
+
+.admin-header-brand h1 {
+
+    margin: 0;
+
+    color: #ffffff;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: 17px;
+
+    font-weight: 600;
+
+    line-height: 1.2;
+
+}
+
+
+.admin-header-brand span {
+
+    display: block;
+
+    margin-top: 4px;
+
+    color: #d4af37;
+
+    font-size: 11px;
+
+    letter-spacing: 1px;
+
+    text-transform: uppercase;
+
+}
+
+
+/* =========================================================
+   HEADER USER
+   ========================================================= */
+
+.admin-header-user {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 14px;
+
+    flex-shrink: 0;
+
+}
+
+
+.admin-header-user > span {
+
+    color:
+        rgba(255, 255, 255, 0.82);
+
+    font-size: 14px;
+
+    font-weight: 500;
+
+}
+
+
+#admin-logout-button {
+
+    padding:
+        9px 16px;
+
+    border:
+        1px solid
+        rgba(212, 175, 55, 0.45);
+
+    border-radius: 8px;
+
+    cursor: pointer;
+
+    background:
+        rgba(212, 175, 55, 0.08);
+
+    color: #d4af37;
+
+    font-size: 13px;
+
+    font-weight: 600;
+
+    transition:
+        background 0.2s ease,
+        color 0.2s ease,
+        transform 0.2s ease;
+
+}
+
+
+#admin-logout-button:hover {
+
+    background: #d4af37;
+
+    color: #16051f;
+
+    transform:
+        translateY(-1px);
+
+}
+
+
+/* =========================================================
+   DASHBOARD MAIN
+   ========================================================= */
+
+.admin-dashboard-main {
+
+    width: 100%;
+
+    max-width: 1450px;
+
+    margin: 0 auto;
+
+    padding:
+        34px 32px 60px;
+
+    box-sizing: border-box;
+
+}
+
+
+/* =========================================================
+   PAGE HEADING
+   ========================================================= */
+
+.admin-page-heading {
+
+    margin-bottom: 26px;
+
+}
+
+
+.admin-page-heading h2 {
+
+    margin: 0;
+
+    color: #ffffff;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: 30px;
+
+    font-weight: 600;
+
+}
+
+
+.admin-page-heading p {
+
+    margin:
+        7px 0 0;
+
+    color:
+        rgba(255, 255, 255, 0.55);
+
+    font-size: 14px;
+
+}
+
+
+/* =========================================================
+   SUMMARY CARDS
+   ========================================================= */
+
+.admin-summary-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, minmax(0, 1fr));
+
+    gap: 18px;
+
+    margin-bottom: 28px;
+
+}
+
+
+.admin-stat-card {
+
+    position: relative;
+
+    overflow: hidden;
+
+    min-height: 125px;
+
+    padding: 22px;
+
+    box-sizing: border-box;
+
+    border:
+        1px solid
+        rgba(212, 175, 55, 0.20);
+
+    border-radius: 16px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255, 255, 255, 0.075),
+            rgba(255, 255, 255, 0.025)
+        );
+
+    box-shadow:
+        0 12px 35px
+        rgba(0, 0, 0, 0.18);
+
+    transition:
+        transform 0.25s ease,
+        border-color 0.25s ease,
+        box-shadow 0.25s ease;
+
+}
+
+
+.admin-stat-card::after {
+
+    content: "";
+
+    position: absolute;
+
+    width: 90px;
+
+    height: 90px;
+
+    right: -35px;
+
+    bottom: -35px;
+
+    border-radius: 50%;
+
+    background:
+        rgba(212, 175, 55, 0.07);
+
+}
+
+
+.admin-stat-card:hover {
+
+    transform:
+        translateY(-3px);
+
+    border-color:
+        rgba(212, 175, 55, 0.45);
+
+    box-shadow:
+        0 18px 40px
+        rgba(0, 0, 0, 0.28);
+
+}
+
+
+.admin-stat-card span {
+
+    display: block;
+
+    color:
+        rgba(255, 255, 255, 0.58);
+
+    font-size: 13px;
+
+    font-weight: 500;
+
+}
+
+
+.admin-stat-card strong {
+
+    display: block;
+
+    margin-top: 12px;
+
+    color: #d4af37;
+
+    font-size: 34px;
+
+    font-weight: 700;
+
+    line-height: 1;
+
+}
+
+
+/* =========================================================
+   DASHBOARD SECTIONS
+   ========================================================= */
+
+.admin-dashboard-section {
+
+    margin-top: 24px;
+
+    padding: 24px;
+
+    box-sizing: border-box;
+
+    border:
+        1px solid
+        rgba(255, 255, 255, 0.08);
+
+    border-radius: 18px;
+
+    background:
+        rgba(255, 255, 255, 0.045);
+
+    box-shadow:
+        0 12px 35px
+        rgba(0, 0, 0, 0.16);
+
+}
+
+
+.admin-section-header {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    margin-bottom: 20px;
+
+}
+
+
+.admin-section-header h3 {
+
+    margin: 0;
+
+    color: #ffffff;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: 20px;
+
+    font-weight: 600;
+
+}
+
+
+.admin-section-header p {
+
+    margin:
+        5px 0 0;
+
+    color:
+        rgba(255, 255, 255, 0.48);
+
+    font-size: 12px;
+
+}
+
+
+/* =========================================================
+   TABLE CONTAINER
+   ========================================================= */
+
+.admin-table-container {
+
+    width: 100%;
+
+}
+
+
+.admin-table-scroll {
+
+    width: 100%;
+
+    overflow-x: auto;
+
+    border-radius: 12px;
+
+}
+
+
+/* =========================================================
+   TABLE
+   ========================================================= */
+
+.admin-table {
+
+    width: 100%;
+
+    min-width: 700px;
+
+    border-collapse: collapse;
+
+}
+
+
+.admin-table th {
+
+    padding:
+        13px 14px;
+
+    border-bottom:
+        1px solid
+        rgba(212, 175, 55, 0.20);
+
+    color:
+        rgba(255, 255, 255, 0.48);
+
+    font-size: 11px;
+
+    font-weight: 600;
+
+    letter-spacing: 0.7px;
+
+    text-align: left;
+
+    text-transform: uppercase;
+
+    white-space: nowrap;
+
+}
+
+
+.admin-table td {
+
+    padding:
+        15px 14px;
+
+    border-bottom:
+        1px solid
+        rgba(255, 255, 255, 0.055);
+
+    color:
+        rgba(255, 255, 255, 0.82);
+
+    font-size: 13px;
+
+    vertical-align: middle;
+
+}
+
+
+.admin-table tbody tr {
+
+    transition:
+        background 0.2s ease;
+
+}
+
+
+.admin-table tbody tr:hover {
+
+    background:
+        rgba(212, 175, 55, 0.045);
+
+}
+
+
+.admin-table tbody tr:last-child td {
+
+    border-bottom: none;
+
+}
+
+
+/* =========================================================
+   STATUS BADGES
+   ========================================================= */
+
+.admin-status-badge {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    min-width: 78px;
+
+    padding:
+        5px 10px;
+
+    border-radius: 999px;
+
+    font-size: 11px;
+
+    font-weight: 600;
+
+    white-space: nowrap;
+
+}
+
+
+.status-pending {
+
+    background:
+        rgba(234, 179, 8, 0.13);
+
+    color:
+        #facc15;
+
+}
+
+
+.status-accepted {
+
+    background:
+        rgba(34, 197, 94, 0.13);
+
+    color:
+        #4ade80;
+
+}
+
+
+.status-rejected {
+
+    background:
+        rgba(239, 68, 68, 0.13);
+
+    color:
+        #f87171;
+
+}
+
+
+.status-confirmed {
+
+    background:
+        rgba(59, 130, 246, 0.13);
+
+    color:
+        #60a5fa;
+
+}
+
+
+.status-upcoming {
+
+    background:
+        rgba(168, 85, 247, 0.13);
+
+    color:
+        #c084fc;
+
+}
+
+
+.status-completed {
+
+    background:
+        rgba(20, 184, 166, 0.13);
+
+    color:
+        #2dd4bf;
+
+}
+
+
+.status-cancelled {
+
+    background:
+        rgba(239, 68, 68, 0.13);
+
+    color:
+        #f87171;
+
+}
+
+
+/* =========================================================
+   LOADING STATE
+   ========================================================= */
+
+.admin-loading {
+
+    padding:
+        35px 20px;
+
+    text-align: center;
+
+    color:
+        rgba(255, 255, 255, 0.45);
+
+    font-size: 13px;
+
+}
+
+
+/* =========================================================
+   EMPTY STATE
+   ========================================================= */
+
+.admin-empty {
+
+    padding:
+        35px 20px;
+
+    text-align: center;
+
+    color:
+        rgba(255, 255, 255, 0.45);
+
+    font-size: 13px;
+
+}
+
+
+/* =========================================================
+   RECENT ACTIVITY
+   ========================================================= */
+
+.admin-activity-list {
+
+    display: flex;
+
+    flex-direction: column;
+
+}
+
+
+.admin-activity-item {
+
+    display: flex;
+
+    align-items: flex-start;
+
+    justify-content: space-between;
+
+    gap: 24px;
+
+    padding:
+        17px 0;
+
+    border-bottom:
+        1px solid
+        rgba(255, 255, 255, 0.06);
+
+}
+
+
+.admin-activity-item:first-child {
+
+    padding-top: 0;
+
+}
+
+
+.admin-activity-item:last-child {
+
+    padding-bottom: 0;
+
+    border-bottom: none;
+
+}
+
+
+.admin-activity-main {
+
+    min-width: 0;
+
+}
+
+
+.admin-activity-main strong {
+
+    color: #ffffff;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+}
+
+
+.admin-activity-main span {
+
+    margin-left: 10px;
+
+    color: #d4af37;
+
+    font-size: 12px;
+
+    font-weight: 500;
+
+}
+
+
+.admin-activity-main p {
+
+    margin:
+        7px 0 0;
+
+    color:
+        rgba(255, 255, 255, 0.48);
+
+    font-size: 12px;
+
+    line-height: 1.5;
+
+}
+
+
+.admin-activity-meta {
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: flex-end;
+
+    gap: 4px;
+
+    flex-shrink: 0;
+
+}
+
+
+.admin-activity-meta span {
+
+    color:
+        rgba(255, 255, 255, 0.7);
+
+    font-size: 11px;
+
+    font-weight: 500;
+
+}
+
+
+.admin-activity-meta time {
+
+    color:
+        rgba(255, 255, 255, 0.38);
+
+    font-size: 10px;
+
+    white-space: nowrap;
+
+}
+
+
+/* =========================================================
+   SCROLLBAR
+   ========================================================= */
+
+.admin-table-scroll::-webkit-scrollbar {
+
+    height: 7px;
+
+}
+
+
+.admin-table-scroll::-webkit-scrollbar-track {
+
+    background:
+        rgba(255, 255, 255, 0.04);
+
+    border-radius: 999px;
+
+}
+
+
+.admin-table-scroll::-webkit-scrollbar-thumb {
+
+    background:
+        rgba(212, 175, 55, 0.35);
+
+    border-radius: 999px;
+
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 900px) {
+
+    .admin-summary-grid {
+
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+
+    }
+
+
+    .admin-dashboard-main {
+
+        padding:
+            28px 22px 50px;
+
+    }
+
+
+    .admin-header {
+
+        padding:
+            12px 22px;
+
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 640px) {
+
+    .admin-login-page {
+
+        padding: 16px;
+
+    }
+
+
+    .admin-login-card {
+
+        padding:
+            32px 22px;
+
+        border-radius: 18px;
+
+    }
+
+
+    .admin-login-header h1 {
+
+        font-size: 28px;
+
+    }
+
+
+    .admin-header {
+
+        position: relative;
+
+        align-items: flex-start;
+
+        flex-direction: column;
+
+        padding:
+            16px;
+
+        gap: 14px;
+
+    }
+
+
+    .admin-header-user {
+
+        width: 100%;
+
+        justify-content: space-between;
+
+    }
+
+
+    .admin-header-brand h1 {
+
+        font-size: 15px;
+
+    }
+
+
+    .admin-header-brand img {
+
+        width: 42px;
+
+        height: 42px;
+
+    }
+
+
+    .admin-dashboard-main {
+
+        padding:
+            24px 16px 45px;
+
+    }
+
+
+    .admin-page-heading h2 {
+
+        font-size: 26px;
+
+    }
+
+
+    .admin-summary-grid {
+
+        grid-template-columns:
+            1fr;
+
+        gap: 12px;
+
+    }
+
+
+    .admin-stat-card {
+
+        min-height: 105px;
+
+        padding: 19px;
+
+    }
+
+
+    .admin-stat-card strong {
+
+        font-size: 30px;
+
+    }
+
+
+    .admin-dashboard-section {
+
+        padding: 18px 15px;
+
+        border-radius: 15px;
+
+    }
+
+
+    .admin-section-header h3 {
+
+        font-size: 18px;
+
+    }
+
+
+    .admin-activity-item {
+
+        flex-direction: column;
+
+        gap: 12px;
+
+    }
+
+
+    .admin-activity-meta {
+
+        align-items: flex-start;
+
+    }
+
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .admin-stat-card,
+    .admin-login-button,
+    #admin-logout-button {
+
+        transition: none;
+
+    }
+
+}
+
+/* =========================================================
+   ENQUIRY MANAGEMENT
+   ========================================================= */
+
+.admin-enquiry-controls {
+
+    display: grid;
+
+    grid-template-columns:
+        minmax(0, 1fr)
+        220px;
+
+    gap: 18px;
+
+    margin-bottom: 24px;
+
+    padding: 20px;
+
+    box-sizing: border-box;
+
+    border:
+        1px solid
+        rgba(255, 255, 255, 0.08);
+
+    border-radius: 16px;
+
+    background:
+        rgba(255, 255, 255, 0.045);
+
+}
+
+
+/* =========================================================
+   SEARCH / FILTER LABELS
+   ========================================================= */
+
+.admin-search-wrapper,
+.admin-filter-wrapper {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 8px;
+
+}
+
+
+.admin-search-wrapper label,
+.admin-filter-wrapper label {
+
+    color:
+        rgba(255, 255, 255, 0.60);
+
+    font-size: 12px;
+
+    font-weight: 600;
+
+    letter-spacing: 0.5px;
+
+}
+
+
+/* =========================================================
+   SEARCH INPUT
+   ========================================================= */
+
+.admin-search-wrapper input {
+
+    width: 100%;
+
+    height: 44px;
+
+    padding:
+        0 14px;
+
+    box-sizing: border-box;
+
+    border:
+        1px solid
+        rgba(255, 255, 255, 0.12);
+
+    border-radius: 9px;
+
+    outline: none;
+
+    background:
+        rgba(255, 255, 255, 0.06);
+
+    color: #ffffff;
+
+    font-family:
+        "Poppins",
+        Arial,
+        sans-serif;
+
+    font-size: 13px;
+
+    transition:
+        border-color 0.2s ease,
+        background 0.2s ease,
+        box-shadow 0.2s ease;
+
+}
+
+
+.admin-search-wrapper input::placeholder {
+
+    color:
+        rgba(255, 255, 255, 0.35);
+
+}
+
+
+.admin-search-wrapper input:focus {
+
+    border-color:
+        rgba(212, 175, 55, 0.65);
+
+    background:
+        rgba(255, 255, 255, 0.08);
+
+    box-shadow:
+        0 0 0 3px
+        rgba(212, 175, 55, 0.08);
+
+}
+
+
+/* =========================================================
+   STATUS FILTER
+   ========================================================= */
+
+.admin-filter-wrapper select {
+
+    width: 100%;
+
+    height: 44px;
+
+    padding:
+        0 12px;
+
+    box-sizing: border-box;
+
+    border:
+        1px solid
+        rgba(255, 255, 255, 0.12);
+
+    border-radius: 9px;
+
+    outline: none;
+
+    background:
+        #21102b;
+
+    color: #ffffff;
+
+    font-family:
+        "Poppins",
+        Arial,
+        sans-serif;
+
+    font-size: 13px;
+
+    cursor: pointer;
+
+}
+
+
+.admin-filter-wrapper select:focus {
+
+    border-color:
+        rgba(212, 175, 55, 0.65);
+
+    box-shadow:
+        0 0 0 3px
+        rgba(212, 175, 55, 0.08);
+
+}
+
+
+.admin-filter-wrapper select option {
+
+    background:
+        #21102b;
+
+    color:
+        #ffffff;
+
+}
+
+
+/* =========================================================
+   CONTACT CELL
+   ========================================================= */
+
+.admin-contact-cell {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 3px;
+
+}
+
+
+.admin-contact-cell span {
+
+    color:
+        rgba(255, 255, 255, 0.85);
+
+    font-size: 12px;
+
+}
+
+
+.admin-contact-cell small {
+
+    max-width: 220px;
+
+    overflow: hidden;
+
+    color:
+        rgba(255, 255, 255, 0.42);
+
+    font-size: 10px;
+
+    text-overflow: ellipsis;
+
+    white-space: nowrap;
+
+}
+
+
+/* =========================================================
+   ENQUIRY VIEW BUTTON
+   ========================================================= */
+
+.admin-view-button {
+
+    padding:
+        7px 13px;
+
+    border:
+        1px solid
+        rgba(212, 175, 55, 0.35);
+
+    border-radius: 7px;
+
+    cursor: pointer;
+
+    background:
+        rgba(212, 175, 55, 0.08);
+
+    color:
+        #d4af37;
+
+    font-family:
+        "Poppins",
+        Arial,
+        sans-serif;
+
+    font-size: 11px;
+
+    font-weight: 600;
+
+    transition:
+        background 0.2s ease,
+        color 0.2s ease,
+        transform 0.2s ease;
+
+}
+
+
+.admin-view-button:hover {
+
+    background:
+        #d4af37;
+
+    color:
+        #16051f;
+
+    transform:
+        translateY(-1px);
+
+}
+
+
+/* =========================================================
+   ENQUIRY MODAL
+   ========================================================= */
+
+.admin-modal {
+
+    position: fixed;
+
+    inset: 0;
+
+    z-index: 1000;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: 24px;
+
+    box-sizing: border-box;
+
+}
+
+
+.admin-modal[hidden] {
+
+    display: none;
+
+}
+
+
+/* =========================================================
+   MODAL OVERLAY
+   ========================================================= */
+
+.admin-modal-overlay {
+
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        rgba(0, 0, 0, 0.72);
+
+    backdrop-filter:
+        blur(5px);
+
+    -webkit-backdrop-filter:
+        blur(5px);
+
+}
+
+
+/* =========================================================
+   MODAL CARD
+   ========================================================= */
+
+.admin-modal-card {
+
+    position: relative;
+
+    z-index: 1;
+
+    width: 100%;
+
+    max-width: 720px;
+
+    max-height: 90vh;
+
+    overflow-y: auto;
+
+    box-sizing: border-box;
+
+    border:
+        1px solid
+        rgba(212, 175, 55, 0.30);
+
+    border-radius: 18px;
+
+    background:
+        linear-gradient(
+            145deg,
+            #24102f,
+            #120719
+        );
+
+    box-shadow:
+        0 30px 80px
+        rgba(0, 0, 0, 0.55);
+
+}
+
+
+/* =========================================================
+   MODAL HEADER
+   ========================================================= */
+
+.admin-modal-header {
+
+    display: flex;
+
+    align-items: flex-start;
+
+    justify-content: space-between;
+
+    gap: 20px;
+
+    padding:
+        22px 24px;
+
+    border-bottom:
+        1px solid
+        rgba(255, 255, 255, 0.08);
+
+}
+
+
+.admin-modal-header h3 {
+
+    margin: 0;
+
+    color:
+        #ffffff;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: 22px;
+
+    font-weight: 600;
+
+}
+
+
+.admin-modal-header p {
+
+    margin:
+        5px 0 0;
+
+    color:
+        rgba(255, 255, 255, 0.45);
+
+    font-size: 11px;
+
+}
+
+
+/* =========================================================
+   MODAL CLOSE BUTTON
+   ========================================================= */
+
+.admin-modal-close {
+
+    width: 34px;
+
+    height: 34px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    flex-shrink: 0;
+
+    border:
+        1px solid
+        rgba(255, 255, 255, 0.12);
+
+    border-radius: 50%;
+
+    cursor: pointer;
+
+    background:
+        rgba(255, 255, 255, 0.05);
+
+    color:
+        rgba(255, 255, 255, 0.75);
+
+    font-size: 23px;
+
+    line-height: 1;
+
+    transition:
+        background 0.2s ease,
+        color 0.2s ease;
+
+}
+
+
+.admin-modal-close:hover {
+
+    background:
+        rgba(239, 68, 68, 0.15);
+
+    color:
+        #f87171;
+
+}
+
+
+/* =========================================================
+   MODAL CONTENT
+   ========================================================= */
+
+.admin-modal-content {
+
+    padding:
+        24px;
+
+}
+
+
+/* =========================================================
+   DETAIL GRID
+   ========================================================= */
+
+.admin-detail-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+
+    gap: 12px;
+
+}
+
+
+.admin-detail-item {
+
+    min-width: 0;
+
+    padding:
+        14px;
+
+    border:
+        1px solid
+        rgba(255, 255, 255, 0.07);
+
+    border-radius: 10px;
+
+    background:
+        rgba(255, 255, 255, 0.035);
+
+}
+
+
+.admin-detail-item span {
+
+    display: block;
+
+    margin-bottom: 5px;
+
+    color:
+        rgba(255, 255, 255, 0.40);
+
+    font-size: 10px;
+
+    font-weight: 600;
+
+    letter-spacing: 0.5px;
+
+    text-transform: uppercase;
+
+}
+
+
+.admin-detail-item strong {
+
+    display: block;
+
+    overflow-wrap: anywhere;
+
+    color:
+        rgba(255, 255, 255, 0.88);
+
+    font-size: 13px;
+
+    font-weight: 500;
+
+    line-height: 1.5;
+
+}
+
+
+/* =========================================================
+   CUSTOMER MESSAGE
+   ========================================================= */
+
+.admin-detail-message {
+
+    margin-top: 16px;
+
+    padding:
+        16px;
+
+    border-left:
+        3px solid
+        #d4af37;
+
+    border-radius:
+        0 10px 10px 0;
+
+    background:
+        rgba(212, 175, 55, 0.055);
+
+}
+
+
+.admin-detail-message h4 {
+
+    margin:
+        0 0 8px;
+
+    color:
+        #d4af37;
+
+    font-size: 12px;
+
+    font-weight: 600;
+
+    text-transform: uppercase;
+
+    letter-spacing: 0.5px;
+
+}
+
+
+.admin-detail-message p {
+
+    margin: 0;
+
+    color:
+        rgba(255, 255, 255, 0.70);
+
+    font-size: 13px;
+
+    line-height: 1.7;
+
+    white-space: pre-wrap;
+
+    overflow-wrap: anywhere;
+
+}
+
+
+/* =========================================================
+   MODAL ACTIONS
+   ========================================================= */
+
+.admin-modal-actions {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: flex-end;
+
+    gap: 10px;
+
+    padding:
+        18px 24px;
+
+    border-top:
+        1px solid
+        rgba(255, 255, 255, 0.08);
+
+}
+
+
+/* =========================================================
+   ACTION BUTTONS
+   ========================================================= */
+
+.admin-action-button {
+
+    min-width: 135px;
+
+    padding:
+        11px 16px;
+
+    border-radius: 8px;
+
+    cursor: pointer;
+
+    font-family:
+        "Poppins",
+        Arial,
+        sans-serif;
+
+    font-size: 12px;
+
+    font-weight: 600;
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease,
+        background 0.2s ease;
+
+}
+
+
+.admin-action-button:hover {
+
+    transform:
+        translateY(-1px);
+
+}
+
+
+/* =========================================================
+   ACCEPT
+   ========================================================= */
+
+.admin-accept-button {
+
+    border:
+        1px solid
+        rgba(74, 222, 128, 0.40);
+
+    background:
+        rgba(34, 197, 94, 0.10);
+
+    color:
+        #4ade80;
+
+}
+
+
+.admin-accept-button:hover {
+
+    background:
+        rgba(34, 197, 94, 0.20);
+
+    box-shadow:
+        0 8px 20px
+        rgba(34, 197, 94, 0.10);
+
+}
+
+
+/* =========================================================
+   REJECT
+   ========================================================= */
+
+.admin-reject-button {
+
+    border:
+        1px solid
+        rgba(248, 113, 113, 0.40);
+
+    background:
+        rgba(239, 68, 68, 0.10);
+
+    color:
+        #f87171;
+
+}
+
+
+.admin-reject-button:hover {
+
+    background:
+        rgba(239, 68, 68, 0.20);
+
+    box-shadow:
+        0 8px 20px
+        rgba(239, 68, 68, 0.10);
+
+}
+
+
+/* =========================================================
+   STATUS NOTE
+   ========================================================= */
+
+.admin-status-note {
+
+    width: 100%;
+
+    box-sizing: border-box;
+
+    padding:
+        11px 14px;
+
+    border-radius: 8px;
+
+    background:
+        rgba(212, 175, 55, 0.06);
+
+    color:
+        rgba(255, 255, 255, 0.55);
+
+    font-size: 12px;
+
+}
+
+
+.admin-status-note strong {
+
+    color:
+        #d4af37;
+
+}
+
+
+/* =========================================================
+   ERROR STATE
+   ========================================================= */
+
+.admin-error-state {
+
+    padding:
+        22px;
+
+    border:
+        1px solid
+        rgba(248, 113, 113, 0.20);
+
+    border-radius: 10px;
+
+    background:
+        rgba(239, 68, 68, 0.06);
+
+}
+
+
+.admin-error-state strong {
+
+    color:
+        #f87171;
+
+    font-size: 13px;
+
+}
+
+
+.admin-error-state p {
+
+    margin:
+        7px 0 0;
+
+    color:
+        rgba(255, 255, 255, 0.50);
+
+    font-size: 12px;
+
+    line-height: 1.5;
+
+}
+
+
+/* =========================================================
+   ENQUIRY TABLE IMPROVEMENTS
+   ========================================================= */
+
+.admin-enquiries-table th:first-child,
+.admin-enquiries-table td:first-child {
+
+    width: 55px;
+
+}
+
+
+.admin-enquiries-table th:last-child,
+.admin-enquiries-table td:last-child {
+
+    width: 80px;
+
+}
+
+
+/* =========================================================
+   MODAL SCROLLBAR
+   ========================================================= */
+
+.admin-modal-card::-webkit-scrollbar {
+
+    width: 7px;
+
+}
+
+
+.admin-modal-card::-webkit-scrollbar-track {
+
+    background:
+        rgba(255, 255, 255, 0.03);
+
+}
+
+
+.admin-modal-card::-webkit-scrollbar-thumb {
+
+    background:
+        rgba(212, 175, 55, 0.30);
+
+    border-radius: 999px;
+
+}
+
+
+/* =========================================================
+   ENQUIRY RESPONSIVE DESIGN
+   ========================================================= */
+
+@media (max-width: 760px) {
+
+    .admin-enquiry-controls {
+
+        grid-template-columns:
+            1fr;
+
+        gap: 14px;
+
+        padding: 16px;
+
+    }
+
+
+    .admin-modal {
+
+        padding: 14px;
+
+    }
+
+
+    .admin-modal-card {
+
+        max-height: 94vh;
+
+        border-radius: 15px;
+
+    }
+
+
+    .admin-modal-header {
+
+        padding:
+            18px;
+
+    }
+
+
+    .admin-modal-content {
+
+        padding:
+            18px;
+
+    }
+
+
+    .admin-modal-actions {
+
+        padding:
+            15px 18px;
+
+        flex-direction: column-reverse;
+
+        align-items: stretch;
+
+    }
+
+
+    .admin-action-button {
+
+        width: 100%;
+
+    }
+
+
+    .admin-detail-grid {
+
+        grid-template-columns:
+            1fr;
+
+    }
+
+}
+
+
+@media (max-width: 480px) {
+
+    .admin-enquiry-controls {
+
+        margin-bottom: 16px;
+
+    }
+
+
+    .admin-modal-header h3 {
+
+        font-size: 19px;
+
+    }
+
+
+    .admin-detail-item {
+
+        padding:
+            12px;
+
+    }
+
+
+    .admin-detail-message {
+
+        padding:
+            13px;
+
+    }
+
+}
+
+/* =========================================================
+   CREATE ORDER BUTTON
+   ========================================================= */
+
+.admin-create-order-button {
+
+    border:
+        1px solid
+        rgba(212, 175, 55, 0.45);
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(212, 175, 55, 0.18),
+            rgba(212, 175, 55, 0.08)
+        );
+
+    color:
+        #d4af37;
+
+}
+
+
+.admin-create-order-button:hover {
+
+    background:
+        #d4af37;
+
+    color:
+        #16051f;
+
+    box-shadow:
+        0 8px 22px
+        rgba(212, 175, 55, 0.18);
+
+}
+
+
+/* =========================================================
+   ORDER CREATION SUCCESS
+   ========================================================= */
+
+.admin-order-success {
+
+    width: 100%;
+
+    box-sizing: border-box;
+
+    padding:
+        11px 14px;
+
+    border:
+        1px solid
+        rgba(74, 222, 128, 0.25);
+
+    border-radius: 8px;
+
+    background:
+        rgba(34, 197, 94, 0.08);
+
+}
+
+
+.admin-order-success strong {
+
+    color:
+        #4ade80;
+
+    font-size: 12px;
+
+}
+
+
+.admin-order-success p {
+
+    margin:
+        4px 0 0;
+
+    color:
+        rgba(255, 255, 255, 0.55);
+
+    font-size: 11px;
+
+}
+
+/* =========================================================
+   ADMIN APPLICATION LAYOUT
+   ========================================================= */
+
+.admin-app {
+
+    min-height: 100vh;
+
+    box-sizing: border-box;
+
+    color: #ffffff;
+
+    background:
+        radial-gradient(
+            circle at top left,
+            #35104d 0%,
+            #16051f 35%,
+            #0b0310 100%
+        );
+
+    font-family:
+        "Poppins",
+        Arial,
+        sans-serif;
+
+}
+
+
+/* =========================================================
+   ADMIN PAGE CONTENT
+   ========================================================= */
+
+.admin-page-content {
+
+    width: 100%;
+
+    min-height: calc(100vh - 78px);
+
+    box-sizing: border-box;
+
+}
+
+
+/* =========================================================
+   ADMIN NAVIGATION
+   ========================================================= */
+
+.admin-navigation {
+
+    position: sticky;
+
+    top: 78px;
+
+    z-index: 90;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 8px;
+
+    width: 100%;
+
+    padding:
+        10px 24px;
+
+    box-sizing: border-box;
+
+    border-bottom:
+        1px solid
+        rgba(212, 175, 55, 0.18);
+
+    background:
+        rgba(22, 5, 31, 0.94);
+
+    backdrop-filter:
+        blur(18px);
+
+    -webkit-backdrop-filter:
+        blur(18px);
+
+}
+
+
+/* =========================================================
+   NAVIGATION LINKS
+   ========================================================= */
+
+.admin-navigation a {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    min-height: 38px;
+
+    padding:
+        8px 16px;
+
+    box-sizing: border-box;
+
+    border:
+        1px solid
+        transparent;
+
+    border-radius: 8px;
+
+    color:
+        rgba(255, 255, 255, 0.65);
+
+    background:
+        transparent;
+
+    font-family:
+        "Poppins",
+        Arial,
+        sans-serif;
+
+    font-size: 12px;
+
+    font-weight: 600;
+
+    text-decoration: none;
+
+    white-space: nowrap;
+
+    transition:
+        color 0.2s ease,
+        background 0.2s ease,
+        border-color 0.2s ease,
+        transform 0.2s ease;
+
+}
+
+
+/* =========================================================
+   NAVIGATION HOVER
+   ========================================================= */
+
+.admin-navigation a:hover {
+
+    color:
+        #ffffff;
+
+    background:
+        rgba(212, 175, 55, 0.08);
+
+    border-color:
+        rgba(212, 175, 55, 0.18);
+
+    transform:
+        translateY(-1px);
+
+}
+
+
+/* =========================================================
+   ACTIVE NAVIGATION
+   ========================================================= */
+
+.admin-navigation a.active {
+
+    color:
+        #16051f;
+
+    background:
+        linear-gradient(
+            135deg,
+            #d4af37,
+            #f1d77a
+        );
+
+    border-color:
+        rgba(212, 175, 55, 0.75);
+
+    box-shadow:
+        0 6px 18px
+        rgba(212, 175, 55, 0.14);
+
+}
+
+
+/* =========================================================
+   ACTIVE NAVIGATION HOVER
+   ========================================================= */
+
+.admin-navigation a.active:hover {
+
+    color:
+        #16051f;
+
+    background:
+        linear-gradient(
+            135deg,
+            #f1d77a,
+            #d4af37
+        );
+
+}
+
+
+/* =========================================================
+   ADMIN HEADER FIX
+   ========================================================= */
+
+.admin-app .admin-header {
+
+    position: sticky;
+
+    top: 0;
+
+}
+
+
+/* =========================================================
+   ADMIN MAIN CONTENT FIX
+   ========================================================= */
+
+.admin-app .admin-dashboard-main {
+
+    width: 100%;
+
+    max-width: 1450px;
+
+    margin: 0 auto;
+
+    box-sizing: border-box;
+
+}
+
+
+/* =========================================================
+   NAVIGATION + CONTENT SPACING
+   ========================================================= */
+
+.admin-app .admin-page-content {
+
+    display: block;
+
+}
+
+
+/* =========================================================
+   MOBILE NAVIGATION
+   ========================================================= */
+
+@media (max-width: 760px) {
+
+    .admin-navigation {
+
+        position: relative;
+
+        top: auto;
+
+        justify-content:
+            flex-start;
+
+        gap: 6px;
+
+        padding:
+            9px 14px;
+
+        overflow-x: auto;
+
+        overflow-y: hidden;
+
+        scrollbar-width: thin;
+
+    }
+
+
+    .admin-navigation a {
+
+        flex-shrink: 0;
+
+        min-height: 36px;
+
+        padding:
+            7px 13px;
+
+        font-size: 11px;
+
+    }
+
+
+    .admin-page-content {
+
+        min-height:
+            calc(100vh - 130px);
+
+    }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 480px) {
+
+    .admin-navigation {
+
+        justify-content:
+            flex-start;
+
+        padding:
+            8px 10px;
+
+    }
+
+
+    .admin-navigation a {
+
+        padding:
+            7px 11px;
+
+        font-size: 10px;
+
+    }
+
+}
+
+/* =========================================================
+   BOOKING & PAYMENT MANAGEMENT
+   ========================================================= */
+
+
+/* =========================================================
+   BOOKING / PAYMENT PAGE
+   ========================================================= */
+
+.admin-booking-page {
+
+    width: 100%;
+
+    max-width: 1450px;
+
+    margin: 0 auto;
+
+    padding:
+        32px;
+
+    box-sizing: border-box;
+
+}
+
+
+/* =========================================================
+   BOOKING PAGE HEADER
+   ========================================================= */
+
+.admin-booking-header {
+
+    display: flex;
+
+    align-items: flex-start;
+
+    justify-content: space-between;
+
+    gap: 20px;
+
+    margin-bottom: 26px;
+
+}
+
+
+.admin-booking-header h2 {
+
+    margin: 0;
+
+    color: #ffffff;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: 30px;
+
+    font-weight: 600;
+
+}
+
+
+.admin-booking-header p {
+
+    margin:
+        7px 0 0;
+
+    color:
+        rgba(255, 255, 255, 0.52);
+
+    font-size: 13px;
+
+}
+
+
+/* =========================================================
+   BOOKING INFORMATION GRID
+   ========================================================= */
+
+.admin-booking-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+
+    gap: 20px;
+
+    margin-bottom: 20px;
+
+}
+
+
+/* =========================================================
+   BOOKING CARD
+   ========================================================= */
+
+.admin-booking-card {
+
+    padding: 22px;
+
+    box-sizing: border-box;
+
+    border:
+        1px solid
+        rgba(255, 255, 255, 0.08);
+
+    border-radius: 16px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255, 255, 255, 0.07),
+            rgba(255, 255, 255, 0.025)
+        );
+
+    box-shadow:
+        0 12px 35px
+        rgba(0, 0, 0, 0.16);
+
+}
+
+
+.admin-booking-card h3 {
+
+    margin:
+        0 0 18px;
+
+    color: #ffffff;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: 19px;
+
+    font-weight: 600;
+
+}
+
+
+/* =========================================================
+   BOOKING DETAIL GRID
+   ========================================================= */
+
+.admin-booking-detail-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+
+    gap: 12px;
+
+}
+
+
+.admin-booking-detail-item {
+
+    min-width: 0;
+
+    padding: 14px;
+
+    box-sizing: border-box;
+
+    border:
+        1px solid
+        rgba(255, 255, 255, 0.07);
+
+    border-radius: 10px;
+
+    background:
+        rgba(255, 255, 255, 0.035);
+
+}
+
+
+.admin-booking-detail-item span {
+
+    display: block;
+
+    margin-bottom: 5px;
+
+    color:
+        rgba(255, 255, 255, 0.40);
+
+    font-size: 10px;
+
+    font-weight: 600;
+
+    letter-spacing: 0.5px;
+
+    text-transform: uppercase;
+
+}
+
+
+.admin-booking-detail-item strong {
+
+    display: block;
+
+    overflow-wrap: anywhere;
+
+    color:
+        rgba(255, 255, 255, 0.90);
+
+    font-size: 13px;
+
+    font-weight: 500;
+
+    line-height: 1.5;
+
+}
+
+
+/* =========================================================
+   BOOKING NUMBER
+   ========================================================= */
+
+.admin-booking-number {
+
+    color:
+        #d4af37 !important;
+
+    font-weight: 700 !important;
+
+    letter-spacing: 0.5px;
+
+}
+
+
+/* =========================================================
+   TOTAL AMOUNT
+   ========================================================= */
+
+.admin-booking-total {
+
+    color:
+        #4ade80 !important;
+
+    font-size: 16px !important;
+
+    font-weight: 700 !important;
+
+}
+
+
+/* =========================================================
+   PAYMENT STATUS BADGES
+   ========================================================= */
+
+.admin-payment-status {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    min-width: 95px;
+
+    padding:
+        6px 12px;
+
+    box-sizing: border-box;
+
+    border-radius: 999px;
+
+    font-size: 11px;
+
+    font-weight: 700;
+
+    white-space: nowrap;
+
+}
+
+
+.admin-payment-status-unpaid {
+
+    background:
+        rgba(239, 68, 68, 0.13);
+
+    color:
+        #f87171;
+
+}
+
+
+.admin-payment-status-partial {
+
+    background:
+        rgba(234, 179, 8, 0.13);
+
+    color:
+        #facc15;
+
+}
+
+
+.admin-payment-status-paid {
+
+    background:
+        rgba(34, 197, 94, 0.13);
+
+    color:
+        #4ade80;
+
+}
+
+
+/* =========================================================
+   PAYMENT SUMMARY
+   ========================================================= */
+
+.admin-payment-summary {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, minmax(0, 1fr));
+
+    gap: 14px;
+
+    margin-bottom: 20px;
+
+}
+
+
+.admin-payment-summary-card {
+
+    min-height: 110px;
+
+    padding: 20px;
+
+    box-sizing: border-box;
+
+    border:
+        1px solid
+        rgba(212, 175, 55, 0.16);
+
+    border-radius: 14px;
+
+    background:
+        rgba(255, 255, 255, 0.045);
+
+}
+
+
+.admin-payment-summary-card span {
+
+    display: block;
+
+    color:
+        rgba(255, 255, 255, 0.48);
+
+    font-size: 11px;
+
+    font-weight: 600;
+
+    letter-spacing: 0.5px;
+
+    text-transform: uppercase;
+
+}
+
+
+.admin-payment-summary-card strong {
+
+    display: block;
+
+    margin-top: 10px;
+
+    color: #ffffff;
+
+    font-size: 24px;
+
+    font-weight: 700;
+
+}
+
+
+.admin-payment-summary-card.total strong {
+
+    color:
+        #d4af37;
+
+}
+
+
+.admin-payment-summary-card.paid strong {
+
+    color:
+        #4ade80;
+
+}
+
+
+.admin-payment-summary-card.balance strong {
+
+    color:
+        #facc15;
+
+}
+
+
+.admin-payment-summary-card.balance.zero strong {
+
+    color:
+        #4ade80;
+
+}
+
+
+/* =========================================================
+   PAYMENT HISTORY SECTION
+   ========================================================= */
+
+.admin-payment-history {
+
+    margin-top: 20px;
+
+    padding: 22px;
+
+    box-sizing: border-box;
+
+    border:
+        1px solid
+        rgba(255, 255, 255, 0.08);
+
+    border-radius: 16px;
+
+    background:
+        rgba(255, 255, 255, 0.045);
+
+}
+
+
+.admin-payment-history-header {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 15px;
+
+    margin-bottom: 18px;
+
+}
+
+
+.admin-payment-history-header h3 {
+
+    margin: 0;
+
+    color: #ffffff;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: 19px;
+
+    font-weight: 600;
+
+}
+
+
+/* =========================================================
+   PAYMENT TABLE
+   ========================================================= */
+
+.admin-payment-table-wrapper {
+
+    width: 100%;
+
+    overflow-x: auto;
+
+    border-radius: 10px;
+
+}
+
+
+.admin-payment-table {
+
+    width: 100%;
+
+    min-width: 750px;
+
+    border-collapse: collapse;
+
+}
+
+
+.admin-payment-table th {
+
+    padding:
+        12px 14px;
+
+    border-bottom:
+        1px solid
+        rgba(212, 175, 55, 0.20);
+
+    color:
+        rgba(255, 255, 255, 0.48);
+
+    font-size: 10px;
+
+    font-weight: 600;
+
+    letter-spacing: 0.7px;
+
+    text-align: left;
+
+    text-transform: uppercase;
+
+    white-space: nowrap;
+
+}
+
+
+.admin-payment-table td {
+
+    padding:
+        14px;
+
+    border-bottom:
+        1px solid
+        rgba(255, 255, 255, 0.055);
+
+    color:
+        rgba(255, 255, 255, 0.82);
+
+    font-size: 12px;
+
+    vertical-align: middle;
+
+}
+
+
+.admin-payment-table tbody tr {
+
+    transition:
+        background 0.2s ease;
+
+}
+
+
+.admin-payment-table tbody tr:hover {
+
+    background:
+        rgba(212, 175, 55, 0.045);
+
+}
+
+
+.admin-payment-table tbody tr:last-child td {
+
+    border-bottom: none;
+
+}
+
+
+/* =========================================================
+   PAYMENT AMOUNT
+   ========================================================= */
+
+.admin-payment-amount {
+
+    color:
+        #4ade80 !important;
+
+    font-weight: 700 !important;
+
+    white-space: nowrap;
+
+}
+
+
+/* =========================================================
+   PAYMENT TYPE
+   ========================================================= */
+
+.admin-payment-type {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    padding:
+        5px 9px;
+
+    border-radius: 7px;
+
+    background:
+        rgba(168, 85, 247, 0.10);
+
+    color:
+        #c084fc;
+
+    font-size: 10px;
+
+    font-weight: 600;
+
+}
+
+
+/* =========================================================
+   PAYMENT METHOD
+   ========================================================= */
+
+.admin-payment-method {
+
+    color:
+        rgba(255, 255, 255, 0.72);
+
+    font-size: 12px;
+
+    font-weight: 500;
+
+}
+
+
+/* =========================================================
+   PAYMENT DATE
+   ========================================================= */
+
+.admin-payment-date {
+
+    color:
+        rgba(255, 255, 255, 0.58);
+
+    font-size: 11px;
+
+    white-space: nowrap;
+
+}
+
+
+/* =========================================================
+   PAYMENT NOTES
+   ========================================================= */
+
+.admin-payment-notes {
+
+    max-width: 260px;
+
+    color:
+        rgba(255, 255, 255, 0.48);
+
+    font-size: 11px;
+
+    line-height: 1.5;
+
+    overflow-wrap: anywhere;
+
+}
+
+
+/* =========================================================
+   NO PAYMENT RECORDS
+   ========================================================= */
+
+.admin-no-payments {
+
+    padding:
+        28px 20px;
+
+    text-align: center;
+
+    color:
+        rgba(255, 255, 255, 0.42);
+
+    font-size: 12px;
+
+}
+
+
+/* =========================================================
+   ADD PAYMENT SECTION
+   ========================================================= */
+
+.admin-add-payment {
+
+    margin-top: 20px;
+
+    padding: 22px;
+
+    box-sizing: border-box;
+
+    border:
+        1px solid
+        rgba(212, 175, 55, 0.18);
+
+    border-radius: 16px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(212, 175, 55, 0.055),
+            rgba(255, 255, 255, 0.025)
+        );
+
+}
+
+
+.admin-add-payment h3 {
+
+    margin:
+        0 0 18px;
+
+    color:
+        #ffffff;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: 19px;
+
+    font-weight: 600;
+
+}
+
+
+/* =========================================================
+   PAYMENT FORM
+   ========================================================= */
+
+.admin-payment-form {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 18px;
+
+}
+
+
+.admin-payment-form-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+
+    gap: 16px;
+
+}
+
+
+.admin-payment-form-group {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 7px;
+
+}
+
+
+.admin-payment-form-group.full-width {
+
+    grid-column:
+        1 / -1;
+
+}
+
+
+.admin-payment-form-group label {
+
+    color:
+        rgba(255, 255, 255, 0.65);
+
+    font-size: 11px;
+
+    font-weight: 600;
+
+    letter-spacing: 0.4px;
+
+}
+
+
+.admin-payment-form-group input,
+.admin-payment-form-group select,
+.admin-payment-form-group textarea {
+
+    width: 100%;
+
+    box-sizing: border-box;
+
+    border:
+        1px solid
+        rgba(255, 255, 255, 0.12);
+
+    border-radius: 9px;
+
+    outline: none;
+
+    background:
+        rgba(255, 255, 255, 0.06);
+
+    color:
+        #ffffff;
+
+    font-family:
+        "Poppins",
+        Arial,
+        sans-serif;
+
+    font-size: 12px;
+
+    transition:
+        border-color 0.2s ease,
+        background 0.2s ease,
+        box-shadow 0.2s ease;
+
+}
+
+
+.admin-payment-form-group input,
+.admin-payment-form-group select {
+
+    height: 44px;
+
+    padding:
+        0 13px;
+
+}
+
+
+.admin-payment-form-group textarea {
+
+    min-height: 90px;
+
+    padding:
+        12px 13px;
+
+    resize: vertical;
+
+    line-height: 1.5;
+
+}
+
+
+.admin-payment-form-group input::placeholder,
+.admin-payment-form-group textarea::placeholder {
+
+    color:
+        rgba(255, 255, 255, 0.32);
+
+}
+
+
+.admin-payment-form-group input:focus,
+.admin-payment-form-group select:focus,
+.admin-payment-form-group textarea:focus {
+
+    border-color:
+        rgba(212, 175, 55, 0.65);
+
+    background:
+        rgba(255, 255, 255, 0.08);
+
+    box-shadow:
+        0 0 0 3px
+        rgba(212, 175, 55, 0.08);
+
+}
+
+
+.admin-payment-form-group select option {
+
+    background:
+        #21102b;
+
+    color:
+        #ffffff;
+
+}
+
+
+/* =========================================================
+   PAYMENT FORM ACTIONS
+   ========================================================= */
+
+.admin-payment-form-actions {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: flex-end;
+
+    gap: 10px;
+
+    padding-top: 4px;
+
+}
+
+
+.admin-payment-submit-button {
+
+    min-width: 150px;
+
+    padding:
+        11px 18px;
+
+    border:
+        1px solid
+        rgba(74, 222, 128, 0.40);
+
+    border-radius: 8px;
+
+    cursor: pointer;
+
+    background:
+        rgba(34, 197, 94, 0.10);
+
+    color:
+        #4ade80;
+
+    font-family:
+        "Poppins",
+        Arial,
+        sans-serif;
+
+    font-size: 12px;
+
+    font-weight: 600;
+
+    transition:
+        background 0.2s ease,
+        color 0.2s ease,
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+
+}
+
+
+.admin-payment-submit-button:hover {
+
+    background:
+        #4ade80;
+
+    color:
+        #16051f;
+
+    transform:
+        translateY(-1px);
+
+    box-shadow:
+        0 8px 20px
+        rgba(74, 222, 128, 0.12);
+
+}
+
+
+.admin-payment-submit-button:disabled {
+
+    cursor:
+        not-allowed;
+
+    opacity:
+        0.45;
+
+    transform:
+        none;
+
+    box-shadow:
+        none;
+
+}
+
+
+/* =========================================================
+   PAYMENT WARNING
+   ========================================================= */
+
+.admin-payment-warning {
+
+    padding:
+        11px 14px;
+
+    border:
+        1px solid
+        rgba(234, 179, 8, 0.20);
+
+    border-radius: 8px;
+
+    background:
+        rgba(234, 179, 8, 0.06);
+
+    color:
+        rgba(255, 255, 255, 0.55);
+
+    font-size: 11px;
+
+    line-height: 1.5;
+
+}
+
+
+.admin-payment-warning strong {
+
+    color:
+        #facc15;
+
+}
+
+
+/* =========================================================
+   PAYMENT SUCCESS MESSAGE
+   ========================================================= */
+
+.admin-payment-success {
+
+    padding:
+        11px 14px;
+
+    border:
+        1px solid
+        rgba(74, 222, 128, 0.25);
+
+    border-radius: 8px;
+
+    background:
+        rgba(34, 197, 94, 0.08);
+
+    color:
+        #4ade80;
+
+    font-size: 12px;
+
+    line-height: 1.5;
+
+}
+
+
+/* =========================================================
+   PAYMENT ERROR MESSAGE
+   ========================================================= */
+
+.admin-payment-error {
+
+    padding:
+        11px 14px;
+
+    border:
+        1px solid
+        rgba(248, 113, 113, 0.25);
+
+    border-radius: 8px;
+
+    background:
+        rgba(239, 68, 68, 0.07);
+
+    color:
+        #f87171;
+
+    font-size: 12px;
+
+    line-height: 1.5;
+
+}
+
+
+/* =========================================================
+   EDIT BOOKING SECTION
+   ========================================================= */
+
+.admin-edit-booking {
+
+    margin-top: 20px;
+
+    padding: 22px;
+
+    box-sizing: border-box;
+
+    border:
+        1px solid
+        rgba(255, 255, 255, 0.08);
+
+    border-radius: 16px;
+
+    background:
+        rgba(255, 255, 255, 0.045);
+
+}
+
+
+.admin-edit-booking h3 {
+
+    margin:
+        0 0 18px;
+
+    color:
+        #ffffff;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: 19px;
+
+    font-weight: 600;
+
+}
+
+
+.admin-booking-edit-form {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 18px;
+
+}
+
+
+.admin-booking-edit-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+
+    gap: 16px;
+
+}
+
+
+.admin-booking-edit-group {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 7px;
+
+}
+
+
+.admin-booking-edit-group label {
+
+    color:
+        rgba(255, 255, 255, 0.65);
+
+    font-size: 11px;
+
+    font-weight: 600;
+
+    letter-spacing: 0.4px;
+
+}
+
+
+.admin-booking-edit-group input {
+
+    width: 100%;
+
+    height: 44px;
+
+    padding:
+        0 13px;
+
+    box-sizing: border-box;
+
+    border:
+        1px solid
+        rgba(255, 255, 255, 0.12);
+
+    border-radius: 9px;
+
+    outline: none;
+
+    background:
+        rgba(255, 255, 255, 0.06);
+
+    color:
+        #ffffff;
+
+    font-family:
+        "Poppins",
+        Arial,
+        sans-serif;
+
+    font-size: 12px;
+
+    transition:
+        border-color 0.2s ease,
+        background 0.2s ease,
+        box-shadow 0.2s ease;
+
+}
+
+
+.admin-booking-edit-group input:focus {
+
+    border-color:
+        rgba(212, 175, 55, 0.65);
+
+    background:
+        rgba(255, 255, 255, 0.08);
+
+    box-shadow:
+        0 0 0 3px
+        rgba(212, 175, 55, 0.08);
+
+}
+
+
+.admin-booking-edit-actions {
+
+    display: flex;
+
+    justify-content: flex-end;
+
+    gap: 10px;
+
+}
+
+
+.admin-booking-save-button {
+
+    min-width: 145px;
+
+    padding:
+        11px 18px;
+
+    border:
+        1px solid
+        rgba(212, 175, 55, 0.45);
+
+    border-radius: 8px;
+
+    cursor: pointer;
+
+    background:
+        rgba(212, 175, 55, 0.10);
+
+    color:
+        #d4af37;
+
+    font-family:
+        "Poppins",
+        Arial,
+        sans-serif;
+
+    font-size: 12px;
+
+    font-weight: 600;
+
+    transition:
+        background 0.2s ease,
+        color 0.2s ease,
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+
+}
+
+
+.admin-booking-save-button:hover {
+
+    background:
+        #d4af37;
+
+    color:
+        #16051f;
+
+    transform:
+        translateY(-1px);
+
+    box-shadow:
+        0 8px 20px
+        rgba(212, 175, 55, 0.12);
+
+}
+
+
+.admin-booking-save-button:disabled {
+
+    cursor:
+        not-allowed;
+
+    opacity:
+        0.45;
+
+    transform:
+        none;
+
+    box-shadow:
+        none;
+
+}
+
+
+/* =========================================================
+   BOOKING / PAYMENT DIVIDER
+   ========================================================= */
+
+.admin-booking-divider {
+
+    width: 100%;
+
+    height: 1px;
+
+    margin:
+        22px 0;
+
+    background:
+        rgba(255, 255, 255, 0.07);
+
+}
+
+
+/* =========================================================
+   RESPONSIVE BOOKING / PAYMENT
+   ========================================================= */
+
+@media (max-width: 900px) {
+
+    .admin-booking-page {
+
+        padding:
+            28px 22px 50px;
+
+    }
+
+
+    .admin-booking-grid {
+
+        grid-template-columns:
+            1fr;
+
+    }
+
+
+    .admin-payment-summary {
+
+        grid-template-columns:
+            repeat(3, minmax(0, 1fr));
+
+    }
+
+}
+
+
+@media (max-width: 760px) {
+
+    .admin-booking-page {
+
+        padding:
+            24px 16px 45px;
+
+    }
+
+
+    .admin-booking-header {
+
+        flex-direction:
+            column;
+
+        gap:
+            10px;
+
+    }
+
+
+    .admin-booking-header h2 {
+
+        font-size:
+            26px;
+
+    }
+
+
+    .admin-booking-card,
+    .admin-payment-history,
+    .admin-add-payment,
+    .admin-edit-booking {
+
+        padding:
+            18px 15px;
+
+        border-radius:
+            15px;
+
+    }
+
+
+    .admin-payment-summary {
+
+        grid-template-columns:
+            1fr;
+
+        gap:
+            12px;
+
+    }
+
+
+    .admin-payment-summary-card {
+
+        min-height:
+            95px;
+
+    }
+
+
+    .admin-payment-form-grid {
+
+        grid-template-columns:
+            1fr;
+
+    }
+
+
+    .admin-payment-form-group.full-width {
+
+        grid-column:
+            auto;
+
+    }
+
+
+    .admin-booking-edit-grid {
+
+        grid-template-columns:
+            1fr;
+
+    }
+
+
+    .admin-payment-form-actions,
+    .admin-booking-edit-actions {
+
+        justify-content:
+            stretch;
+
+        flex-direction:
+            column;
+
+    }
+
+
+    .admin-payment-submit-button,
+    .admin-booking-save-button {
+
+        width:
+            100%;
+
+    }
+
+}
+
+
+@media (max-width: 480px) {
+
+    .admin-booking-page {
+
+        padding:
+            20px 12px 40px;
+
+    }
+
+
+    .admin-booking-header h2 {
+
+        font-size:
+            23px;
+
+    }
+
+
+    .admin-booking-detail-grid {
+
+        grid-template-columns:
+            1fr;
+
+    }
+
+
+    .admin-booking-card h3,
+    .admin-payment-history-header h3,
+    .admin-add-payment h3,
+    .admin-edit-booking h3 {
+
+        font-size:
+            17px;
+
+    }
+
+
+    .admin-payment-summary-card strong {
+
+        font-size:
+            21px;
+
+    }
+
+}
+
+
+/* =========================================================
+   REDUCED MOTION - BOOKING / PAYMENT
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .admin-payment-submit-button,
+    .admin-booking-save-button {
+
+        transition:
+            none;
+
+    }
+
+}
+
