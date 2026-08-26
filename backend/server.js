@@ -5,6 +5,7 @@ const dotenv = require('dotenv');
 const enquiryRoutes = require('./routes/enquiryRoutes');
 const adminRoutes = require('./routes/adminRoutes');
 const orderRoutes = require('./routes/orderRoutes');
+
 const googleRoutes =
     require('./routes/googleRoutes');
 
@@ -32,35 +33,82 @@ dotenv.config();
 
 const app = express();
 
-const PORT = process.env.PORT || 5000;
+const PORT =
+    process.env.PORT || 5000;
 
 
 // ==========================================
-// MIDDLEWARE
+// CORS CONFIGURATION
 // ==========================================
 
-const allowedOrigins = (
-    process.env.FRONTEND_URL ||
-    'http://localhost:3000'
-)
-    .split(',')
-    .map(
-        origin =>
-            origin.trim()
-    )
-    .filter(Boolean);
+const allowedOrigins = [
 
+    // Local development
+    'http://localhost:3000',
+    'http://localhost:5173',
+
+    // Railway production frontend
+    'https://sri-chennakesava-events-production.up.railway.app'
+
+];
+
+
+// Add FRONTEND_URL from environment variables
+// when it is configured.
+if (
+    process.env.FRONTEND_URL
+) {
+
+    const configuredOrigins =
+        process.env.FRONTEND_URL
+            .split(',')
+            .map(
+                origin =>
+                    origin.trim()
+            )
+            .filter(Boolean);
+
+
+    configuredOrigins.forEach(
+        origin => {
+
+            if (
+                !allowedOrigins.includes(
+                    origin
+                )
+            ) {
+
+                allowedOrigins.push(
+                    origin
+                );
+
+            }
+
+        }
+    );
+
+}
+
+
+// ==========================================
+// CORS MIDDLEWARE
+// ==========================================
 
 app.use(
     cors({
+
         origin: (
             requestOrigin,
             callback
         ) => {
 
-            // Allow non-browser requests
-            // such as PowerShell/Postman.
-            if (!requestOrigin) {
+            // ======================================
+            // ALLOW NON-BROWSER REQUESTS
+            // ======================================
+
+            if (
+                !requestOrigin
+            ) {
 
                 return callback(
                     null,
@@ -69,6 +117,10 @@ app.use(
 
             }
 
+
+            // ======================================
+            // ALLOW APPROVED FRONTEND ORIGINS
+            // ======================================
 
             if (
                 allowedOrigins.includes(
@@ -84,6 +136,10 @@ app.use(
             }
 
 
+            // ======================================
+            // REJECT UNKNOWN ORIGINS
+            // ======================================
+
             return callback(
                 null,
                 false
@@ -91,30 +147,57 @@ app.use(
 
         },
 
+
         methods: [
+
             'GET',
+
             'POST',
+
             'PATCH',
+
             'PUT',
+
             'DELETE',
+
             'OPTIONS'
+
         ],
 
+
         allowedHeaders: [
+
             'Content-Type',
+
             'Authorization'
-        ]
+
+        ],
+
+
+        credentials: false
 
     })
 );
 
-// Parse JSON request bodies
-app.use(express.json());
 
-// Parse URL-encoded request bodies
+// ==========================================
+// PARSE JSON REQUEST BODIES
+// ==========================================
+
+app.use(
+    express.json()
+);
+
+
+// ==========================================
+// PARSE URL-ENCODED REQUEST BODIES
+// ==========================================
+
 app.use(
     express.urlencoded({
+
         extended: true
+
     })
 );
 
@@ -129,11 +212,13 @@ app.use(
     adminRoutes
 );
 
+
 // Enquiries
 app.use(
     '/api/enquiries',
     enquiryRoutes
 );
+
 
 // Orders
 app.use(
@@ -141,46 +226,69 @@ app.use(
     orderRoutes
 );
 
+
+// Customers
 app.use(
     '/api/customers',
     customerRoutes
 );
 
+
+// Launch
 app.use(
     '/api/launch',
     launchRoutes
 );
 
+
+// Google
 app.use(
     '/api/google',
     googleRoutes
 );
 
+
 // ==========================================
 // TEST ROUTE
 // ==========================================
 
-app.get('/', (req, res) => {
+app.get(
+    '/',
+    (req, res) => {
 
-    res.json({
-        success: true,
-        message:
-            'SRI CHENNAKESAVA EVENTS backend is running.'
-    });
+        res.json({
 
-});
+            success: true,
+
+            message:
+                'SRI CHENNAKESAVA EVENTS backend is running.'
+
+        });
+
+    }
+);
 
 
 // ==========================================
 // START SERVER
 // ==========================================
 
-app.listen(PORT, async () => {
+app.listen(
+    PORT,
+    async () => {
 
-    console.log(
-        `SRI CHENNAKESAVA EVENTS backend running on port ${PORT}`
-    );
+        console.log(
+            `SRI CHENNAKESAVA EVENTS backend running on port ${PORT}`
+        );
 
-    await testDatabaseConnection();
 
-});
+        console.log(
+            'Allowed CORS origins:',
+            allowedOrigins
+        );
+
+
+        await testDatabaseConnection();
+
+    }
+);
