@@ -29,7 +29,7 @@ export function renderAdminLayout(
                 <div class="admin-header-brand">
 
                     <img
-                        src="public/logo/sce-logo.png"
+                        src="/logo/sce-logo.png"
                         alt="SRI CHENNAKESAVA EVENTS"
                     >
 
