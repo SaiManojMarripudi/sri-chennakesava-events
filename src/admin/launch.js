@@ -129,8 +129,6 @@ export function initializeLaunch() {
 
     console.log(
         'LAUNCH ADMIN FETCH:',
-        endpoint,
-        'TOKEN:',
         Boolean(token)
     );
 

@@ -666,14 +666,23 @@ function animateLiveScreen() {
 
 
 // ==========================================
-// LIVE VOICE
+// LIVE VOICE + REDIRECT
 // ==========================================
 
 function speakLiveMessage() {
 
+    const redirectToWebsite = () => {
+
+        window.location.href = '/';
+
+    };
+
+
     if (
         !('speechSynthesis' in window)
     ) {
+
+        redirectToWebsite();
 
         return;
 
@@ -699,6 +708,26 @@ function speakLiveMessage() {
 
     utterance.volume =
         1;
+
+
+    // ======================================
+    // REDIRECT AFTER VOICE FINISHES
+    // ======================================
+
+    utterance.onend =
+        () => {
+
+            redirectToWebsite();
+
+        };
+
+
+    utterance.onerror =
+        () => {
+
+            redirectToWebsite();
+
+        };
 
 
     window.speechSynthesis.speak(
