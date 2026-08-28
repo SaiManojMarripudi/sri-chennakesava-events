@@ -1271,6 +1271,8 @@ const updateOrderStatus = async (req, res) => {
 
         syncOrderStatusData();
 
+        syncUpcomingEventData();
+
         syncNotificationData();
 
         syncDashboardData();
