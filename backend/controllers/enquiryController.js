@@ -12,6 +12,12 @@ const {
 } = require('../services/businessDataSyncService');
 
 const {
+    sendNewEnquiryEmail
+} = require(
+    '../services/gmailService'
+);
+
+const {
     enquiryReceivedMessage,
     enquiryAcceptedMessage,
     enquiryRejectedMessage
@@ -266,6 +272,56 @@ const createEnquiry = async (req, res) => {
         syncNotificationData();
 
         syncDashboardData();
+
+
+        // ==========================================
+        // BUSINESS EMAIL NOTIFICATION
+        // ==========================================
+
+        try {
+
+            await sendNewEnquiryEmail({
+
+                enquiry_id:
+                    enquiryId,
+
+                full_name:
+                    full_name,
+
+                phone:
+                    phone,
+
+                email:
+                    email,
+
+                event_type:
+                    event_type,
+
+                event_date:
+                    event_date,
+
+                guest_count:
+                    guest_count,
+
+                budget:
+                    budget,
+
+                event_location:
+                    event_location,
+
+                message:
+                    message
+
+            });
+
+        } catch (emailError) {
+
+            console.error(
+                'New enquiry email notification error:',
+                emailError
+            );
+
+        }
 
         // ==========================================
         // SUCCESS RESPONSE
