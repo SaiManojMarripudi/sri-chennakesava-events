@@ -7158,10 +7158,10 @@ body.modal-open {
 
     padding: 0 15px;
 
-    border: 1px solid rgba(255, 255, 255, 0.18);
+    border: 1px solid rgba(255, 255, 255, 0.13);
     border-radius: 12px;
 
-    background: rgba(255, 255, 255, 0.03);
+    background: rgba(0, 0, 0, 0.16);
 
     color: rgba(255, 255, 255, 0.90);
 
@@ -7192,10 +7192,10 @@ body.modal-open {
 
     min-width: 0;
 
-    color: rgba(255, 255, 255, 0.55);
+    color: rgba(255, 255, 255, 0.90);
 
     font-family: var(--font-body);
-    font-size: 13px;
+    font-size: 12px;
     font-weight: 400;
 
     line-height: 1.2;
@@ -7229,7 +7229,7 @@ body.modal-open {
 
     color: var(--color-gold);
 
-    font-size: 14px;
+    font-size: 22px;
     line-height: 1;
 }
 
