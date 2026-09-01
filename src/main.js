@@ -1783,77 +1783,182 @@ if (isLaunchRoute) {
 
                                 <div class="form-group">
 
-                                    <label for="event-type">
-                                        Event Type *
+                                    <label>
+                                        Event Type(s) *
                                     </label>
 
-                                    <select
-                                        id="event-type"
-                                        name="eventType"
-                                        required
+                                    <div
+                                        class="event-type-multiselect"
+                                        id="event-type-multiselect"
                                     >
 
-                                        <option
-                                            value=""
-                                            disabled
-                                            selected
+                                        <button
+                                            type="button"
+                                            class="event-type-selector"
+                                            id="event-type-selector"
                                         >
-                                            Select your event
-                                        </option>
+                                            <span id="event-type-selected-text">
+                                                Select one or more services
+                                            </span>
 
-                                        <option value="Wedding">
-                                            Wedding
-                                        </option>
+                                            <span class="event-type-arrow">
+                                                ▾
+                                            </span>
+                                        </button>
 
-                                        <option value="Engagement">
-                                            Engagement
-                                        </option>
 
-                                        <option value="Birthday">
-                                            Birthday
-                                        </option>
+                                        <div
+                                            class="event-type-options"
+                                            id="event-type-options"
+                                        >
 
-                                        <option value="Anniversary">
-                                            Anniversary
-                                        </option>
+                                            <label class="event-type-option">
+                                                <input
+                                                    type="checkbox"
+                                                    name="eventType"
+                                                    value="Wedding"
+                                                >
+                                                <span>Wedding</span>
+                                            </label>
 
-                                        <option value="Haldi">
-                                            Haldi
-                                        </option>
+                                            <label class="event-type-option">
+                                                <input
+                                                    type="checkbox"
+                                                    name="eventType"
+                                                    value="Engagement"
+                                                >
+                                                <span>Engagement</span>
+                                            </label>
 
-                                        <option value="Mehendi">
-                                            Mehendi
-                                        </option>
+                                            <label class="event-type-option">
+                                                <input
+                                                    type="checkbox"
+                                                    name="eventType"
+                                                    value="Birthday"
+                                                >
+                                                <span>Birthday</span>
+                                            </label>
 
-                                        <option value="Housewarming">
-                                            Housewarming
-                                        </option>
+                                            <label class="event-type-option">
+                                                <input
+                                                    type="checkbox"
+                                                    name="eventType"
+                                                    value="Anniversary"
+                                                >
+                                                <span>Anniversary</span>
+                                            </label>
 
-                                        <option value="Welcome Baby">
-                                            Welcome Baby
-                                        </option>
+                                            <label class="event-type-option">
+                                                <input
+                                                    type="checkbox"
+                                                    name="eventType"
+                                                    value="Haldi"
+                                                >
+                                                <span>Haldi</span>
+                                            </label>
 
-                                        <option value="Pooja">
-                                            Pooja
-                                        </option>
+                                            <label class="event-type-option">
+                                                <input
+                                                    type="checkbox"
+                                                    name="eventType"
+                                                    value="Mehendi"
+                                                >
+                                                <span>Mehendi</span>
+                                            </label>
 
-                                        <option value="Balloon Decoration">
-                                            Balloon Decoration
-                                        </option>
+                                            <label class="event-type-option">
+                                                <input
+                                                    type="checkbox"
+                                                    name="eventType"
+                                                    value="Housewarming"
+                                                >
+                                                <span>Housewarming</span>
+                                            </label>
 
-                                        <option value="Stage & Lighting">
-                                            Stage & Lighting
-                                        </option>
+                                            <label class="event-type-option">
+                                                <input
+                                                    type="checkbox"
+                                                    name="eventType"
+                                                    value="Welcome Baby"
+                                                >
+                                                <span>Welcome Baby</span>
+                                            </label>
 
-                                        <option value="Theme / Corporate Event">
-                                            Theme / Corporate Event
-                                        </option>
+                                            <label class="event-type-option">
+                                                <input
+                                                    type="checkbox"
+                                                    name="eventType"
+                                                    value="Pooja"
+                                                >
+                                                <span>Pooja</span>
+                                            </label>
 
-                                        <option value="Other">
-                                            Other
-                                        </option>
+                                            <label class="event-type-option">
+                                                <input
+                                                    type="checkbox"
+                                                    name="eventType"
+                                                    value="Balloon Decoration"
+                                                >
+                                                <span>Balloon Decoration</span>
+                                            </label>
 
-                                    </select>
+                                            <label class="event-type-option">
+                                                <input
+                                                    type="checkbox"
+                                                    name="eventType"
+                                                    value="Stage & Lighting"
+                                                >
+                                                <span>Stage & Lighting</span>
+                                            </label>
+
+                                            <label class="event-type-option">
+                                                <input
+                                                    type="checkbox"
+                                                    name="eventType"
+                                                    value="Theme / Corporate Event"
+                                                >
+                                                <span>Theme / Corporate Event</span>
+                                            </label>
+
+                                            <label class="event-type-option">
+                                                <input
+                                                    type="checkbox"
+                                                    name="eventType"
+                                                    value="Mandapam Decoration"
+                                                >
+                                                <span>Mandapam Decoration</span>
+                                            </label>
+
+                                            <label class="event-type-option">
+                                                <input
+                                                    type="checkbox"
+                                                    name="eventType"
+                                                    value="Sound System"
+                                                >
+                                                <span>Sound System</span>
+                                            </label>
+
+                                            <label class="event-type-option">
+                                                <input
+                                                    type="checkbox"
+                                                    name="eventType"
+                                                    value="Drums"
+                                                >
+                                                <span>Drums</span>
+                                            </label>
+
+                                            <label class="event-type-option">
+                                                <input
+                                                    type="checkbox"
+                                                    name="eventType"
+                                                    value="Other"
+                                                >
+                                                <span>Other</span>
+                                            </label>
+
+                                        </div>
+
+                                    </div>
 
                                 </div>
 
@@ -3308,6 +3413,118 @@ if (isLaunchRoute) {
     const enquirySubmitButton =
         document.querySelector('.enquiry-submit')
 
+    // ==========================================
+    // EVENT TYPE MULTI-SELECT
+    // ==========================================
+
+    const eventTypeMultiselect =
+        document.getElementById(
+            'event-type-multiselect'
+        )
+
+    const eventTypeSelector =
+        document.getElementById(
+            'event-type-selector'
+        )
+
+    const eventTypeOptions =
+        document.getElementById(
+            'event-type-options'
+        )
+
+    const eventTypeSelectedText =
+        document.getElementById(
+            'event-type-selected-text'
+        )
+
+
+    if (
+        eventTypeMultiselect &&
+        eventTypeSelector &&
+        eventTypeOptions &&
+        eventTypeSelectedText
+    ) {
+
+        eventTypeSelector.addEventListener(
+            'click',
+            () => {
+
+                eventTypeMultiselect.classList.toggle(
+                    'open'
+                )
+
+            }
+        )
+
+
+        const eventTypeCheckboxes =
+            eventTypeOptions.querySelectorAll(
+                'input[type="checkbox"]'
+            )
+
+
+        eventTypeCheckboxes.forEach(
+            checkbox => {
+
+                checkbox.addEventListener(
+                    'change',
+                    () => {
+
+                        const selected =
+                            Array.from(
+                                eventTypeCheckboxes
+                            )
+                                .filter(
+                                    item =>
+                                        item.checked
+                                )
+                                .map(
+                                    item =>
+                                        item.value
+                                )
+
+
+                        if (
+                            selected.length === 0
+                        ) {
+
+                            eventTypeSelectedText.textContent =
+                                'Select one or more services'
+
+                        } else {
+
+                            eventTypeSelectedText.textContent =
+                                selected.join(', ')
+
+                        }
+
+                    }
+                )
+
+            }
+        )
+
+
+        document.addEventListener(
+            'click',
+            event => {
+
+                if (
+                    !eventTypeMultiselect.contains(
+                        event.target
+                    )
+                ) {
+
+                    eventTypeMultiselect.classList.remove(
+                        'open'
+                    )
+
+                }
+
+            }
+        )
+
+    }
 
     enquiryForm.addEventListener(
         'submit',
@@ -3350,7 +3567,10 @@ if (isLaunchRoute) {
 
 
             const eventType =
-                formData.get('eventType') || ''
+                formData
+                    .getAll('eventType')
+                    .filter(value => value !== '')
+                    .join(', ')
 
 
             const eventDate =
