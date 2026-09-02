@@ -100,12 +100,12 @@ if (isLaunchRoute) {
     ========================================= */
 
     const BUSINESS = {
-        whatsapp: 'https://wa.me/9490089978',
+        whatsapp: 'https://wa.me/9491759139',
         instagram: 'https://instagram.com/sri_chennakesava_events',
         email: 'srichennakesavaevents@gmail.com',
         facebook: 'YOUR_FACEBOOK_URL_HERE',
         youtube: 'YOUR_YOUTUBE_URL_HERE',
-        contact: '+91 9121696279'
+        contact: '+91 9491759139'
     }
 
     // ==========================================
@@ -1933,6 +1933,15 @@ if (isLaunchRoute) {
                                                 <input
                                                     type="checkbox"
                                                     name="eventType"
+                                                    value="Temple Decoration"
+                                                >
+                                                <span>Temple Decoration</span>
+                                            </label>
+
+                                            <label class="event-type-option">
+                                                <input
+                                                    type="checkbox"
+                                                    name="eventType"
                                                     value="Sound System"
                                                 >
                                                 <span>Sound System</span>
@@ -2271,8 +2280,10 @@ if (isLaunchRoute) {
                         <div class="footer-column">
                             <h3>Contact Us</h3>
                             <ul class="footer-contact-list">
-                                <li><a href="#Contact Us">📞 +91 9490089978</a></li>
+                                <li><a href="#Contact Us">📞 +91 9491759139</a></li>
                                 <li><a href="#Contact Us">📞 +91 9121696279</a></li>
+                                <li><a href="tel:+919491759139">📞 Contact Us 1</a><li>
+                                <li><a href="tel:+919121696279">📞 Contact Us 2</a><li>
                                 <li><a href="${BUSINESS.whatsapp}" target="_blank" rel="noopener noreferrer">◉ WhatsApp</a></li>
                                 <li><a href="${BUSINESS.instagram}" target="_blank" rel="noopener noreferrer">🅾 𝐈𝐧𝐬𝐭𝐚𝐠𝐫𝐚𝐦</a></li>
                                 <li><a href="mailto:${BUSINESS.email}" data-email-link>✉ Email</a></li>
